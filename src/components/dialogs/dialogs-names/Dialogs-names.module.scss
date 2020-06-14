@@ -1,4 +1,10 @@
 .names{
   display: flex;
   flex-direction: column;
+
+}
+.names a{
+  line-height: 25px;
+  text-decoration: none;
+  text-align: center;
 }
