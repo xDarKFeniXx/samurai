@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
-import store from './state'
+import store from './components/redux/redux-store'
 
 
 
@@ -13,13 +13,17 @@ let rerenderEntireTree = (state) => {
             <App
                 state={state}
                 dispatch={store.dispatch.bind(store)}
+                store={store}
             />
         , document.getElementById('root'));
 }
 
 rerenderEntireTree(store.getState());
 
-store.subscribe(rerenderEntireTree);
+store.subscribe(() => {
+    let state = store.getState();
+    rerenderEntireTree(state);
+});
 
 
 

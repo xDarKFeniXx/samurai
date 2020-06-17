@@ -39,8 +39,7 @@ const App = (props) => {
                         <Route path="/profile">
                             <Profile
                                 posts={posts}
-                                dispatch={props.dispatch}
-                                newPostText={newPostText}
+                                store={props.store}
                             />
                         </Route>
                         <Route path="/music">
