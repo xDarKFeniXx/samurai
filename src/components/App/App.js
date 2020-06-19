@@ -3,7 +3,6 @@ import './App.scss';
 import Header from "../Header";
 import Navigation from "../Navigation";
 import Profile from "../Profile";
-import Dialogs from "../dialogs";
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,13 +11,10 @@ import {
 import Music from "../music";
 import Settings from "../Settings";
 import News from "../news";
+import DialogsContainer from "../Dialogs/DialogsContainer";
 
 const App = (props) => {
-    const {dialogs, messages, newMessageBody}=props.state.dialogsPage;
-    const {posts}=props.state.profilePage;
-    // const {dispatch}=props.dispatch;
-    // console.log(dispatch)
-    const {newPostText}=props.state.profilePage;
+
 
     return (
         <div className="App">
@@ -28,18 +24,14 @@ const App = (props) => {
 
                 <div className="wrapper-content">
                     <Switch>
-                        <Route exact path="/dialogs/">
-                            <Dialogs
-                                dialogData={dialogs}
-                                messageData={messages}
-                                dispatch={props.dispatch}
-                                newMessageBody={newMessageBody}
+                        <Route path="/dialogs/">
+                            <DialogsContainer
+
                             />
                         </Route>
                         <Route path="/profile">
                             <Profile
-                                posts={posts}
-                                store={props.store}
+
                             />
                         </Route>
                         <Route path="/music">
