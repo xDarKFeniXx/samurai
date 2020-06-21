@@ -12,6 +12,7 @@ import Music from "../music";
 import Settings from "../Settings";
 import News from "../news";
 import DialogsContainer from "../Dialogs/DialogsContainer";
+import UsersContainer from "../users/UsersContainer";
 
 const App = (props) => {
 
@@ -29,13 +30,16 @@ const App = (props) => {
 
                             />
                         </Route>
+                        <Route path="/users/">
+                            <UsersContainer/>
+                        </Route>
                         <Route path="/profile">
                             <Profile
 
                             />
                         </Route>
                         <Route path="/music">
-                          <Music/>
+                            <Music/>
                         </Route>
                         <Route path="/settings">
                             <Settings/>

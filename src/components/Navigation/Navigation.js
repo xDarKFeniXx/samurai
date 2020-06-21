@@ -14,6 +14,9 @@ const Navigation = () => {
                 <NavLink activeClassName={styles.active} to="/dialogs">Messages</NavLink>
             </div>
             <div className={styles.item}>
+                <NavLink activeClassName={styles.active} to="/users">Users</NavLink>
+            </div>
+            <div className={styles.item}>
                 <NavLink activeClassName={styles.active} to="/news">News</NavLink>
             </div>
             <div className={styles.item}>
