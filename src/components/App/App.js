@@ -13,6 +13,7 @@ import Settings from "../Settings";
 import News from "../news";
 import DialogsContainer from "../Dialogs/DialogsContainer";
 import UsersContainer from "../users/UsersContainer";
+import MockPosts from "../MockPosts";
 
 const App = (props) => {
 
@@ -37,6 +38,13 @@ const App = (props) => {
                             <Profile
 
                             />
+
+                        </Route>
+                        <Route path="/mock">
+                            <MockPosts
+
+                            />
+
                         </Route>
                         <Route path="/music">
                             <Music/>
