@@ -11,6 +11,9 @@ const Navigation = () => {
                 <NavLink activeClassName={styles.active} to="/profile">Profile</NavLink>
             </div>
             <div className={styles.item}>
+                <NavLink activeClassName={styles.active} to="/mock">JSON PH</NavLink>
+            </div>
+            <div className={styles.item}>
                 <NavLink activeClassName={styles.active} to="/dialogs">Messages</NavLink>
             </div>
             <div className={styles.item}>
