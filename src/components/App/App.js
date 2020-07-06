@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Header from "../Header";
 import Navigation from "../Navigation";
-import Profile from "../Profile";
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,6 +11,8 @@ import Settings from "../Settings";
 import News from "../news";
 import DialogsContainer from "../Dialogs/DialogsContainer";
 import UsersContainer from "../users/UsersContainer";
+import ProfileContainer from "../Profile/ProfileContainer";
+import HeaderContainer from "../Header/HeaderContainer";
 
 const App = (props) => {
 
@@ -20,7 +20,7 @@ const App = (props) => {
     return (
         <div className="App">
             <Router>
-                <Header/>
+                <HeaderContainer/>
                 <Navigation/>
 
                 <div className="wrapper-content">
@@ -33,8 +33,8 @@ const App = (props) => {
                         <Route path="/users/">
                             <UsersContainer/>
                         </Route>
-                        <Route path="/profile">
-                            <Profile
+                        <Route path="/profile/:userId?">
+                            <ProfileContainer
 
                             />
                         </Route>

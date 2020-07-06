@@ -12,8 +12,15 @@
 .card {
   text-align: center;
   border: 2px solid black;
+  margin: 5px;
+}
+
+span {
+  border: 1px solid black;
+  margin: 2px;
 }
 
 .selectedPage {
   font-weight: bold;
+  background: red;
 }
