@@ -15,12 +15,22 @@
   margin: 5px;
 }
 
-span {
-  border: 1px solid black;
-  margin: 2px;
-}
 
 .selectedPage {
   font-weight: bold;
   background: red;
+}
+
+.wrapperPagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  div {
+    border: 1px solid black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

@@ -13,6 +13,7 @@ import DialogsContainer from "../Dialogs/DialogsContainer";
 import UsersContainer from "../users/UsersContainer";
 import ProfileContainer from "../Profile/ProfileContainer";
 import HeaderContainer from "../Header/HeaderContainer";
+import Login from "../Login/Login";
 
 const App = (props) => {
 
@@ -46,6 +47,9 @@ const App = (props) => {
                         </Route>
                         <Route path="/news">
                             <News/>
+                        </Route>
+                        <Route path="/login">
+                            <Login/>
                         </Route>
                     </Switch>
 

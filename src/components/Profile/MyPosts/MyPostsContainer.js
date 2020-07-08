@@ -1,6 +1,4 @@
-import React from 'react';
-import s from './Myposts.module.scss'
-import PostItem from "./post-item";
+
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../state";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
