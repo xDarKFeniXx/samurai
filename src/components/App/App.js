@@ -14,6 +14,7 @@ import UsersContainer from "../users/UsersContainer";
 import ProfileContainer from "../Profile/ProfileContainer";
 import HeaderContainer from "../Header/HeaderContainer";
 import Login from "../Login/Login";
+import MockPosts from "../MockPosts";
 
 const App = (props) => {
 
@@ -50,6 +51,9 @@ const App = (props) => {
                         </Route>
                         <Route path="/login">
                             <Login/>
+                        </Route>
+                        <Route path="/mock">
+                            <MockPosts/>
                         </Route>
                     </Switch>
 
