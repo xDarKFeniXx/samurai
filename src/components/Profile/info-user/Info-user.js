@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Info-user.module.scss'
-import Preloader from "../../preloader";
+import Preloader from "../../common/preloader";
 import ProfileStatus from "./ProfileStatus";
 
 const InfoUser = (props) => {

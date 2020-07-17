@@ -4,9 +4,9 @@ import {
     follow,
     setCurrentPage,
     unfollow, toggleFollowingProgress, getUsers
-} from '../redux/users-reducer';
+} from '../../redux/users-reducer';
 import Users from './Users';
-import Preloader from "../preloader/Preloader";
+import Preloader from "../common/preloader/Preloader";
 import {compose} from "redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 
