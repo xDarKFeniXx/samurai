@@ -4,7 +4,7 @@ import Navigation from "../Navigation";
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route, withRouter
 } from "react-router-dom";
 import Music from "../music";
 import Settings from "../Settings";
@@ -15,13 +15,26 @@ import ProfileContainer from "../Profile/ProfileContainer";
 import HeaderContainer from "../Header/HeaderContainer";
 import Login from "../Login/Login";
 import MockPosts from "../MockPosts";
+import {compose} from "redux";
+import {connect} from "react-redux";
+import {initializeApp} from "../../redux/app-reduсer";
+import Preloader from "../common/preloader";
 
-const App = (props) => {
+class App extends React.Component {
+    componentDidMount() {
+        this.props.initializeApp();
+    }
 
 
-    return (
-        <div className="App">
-            <Router>
+    render() {
+        debugger
+        if (!this.props.initialized) {
+            return <Preloader/>
+        }
+
+        return (
+            <div className="App">
+
                 <HeaderContainer/>
                 <Navigation/>
 
@@ -58,9 +71,16 @@ const App = (props) => {
                     </Switch>
 
                 </div>
-            </Router>
-        </div>
-    );
+
+            </div>
+        );
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+})
+
+export default compose(
+    withRouter,
+    connect(mapStateToProps, {initializeApp}))(App);
