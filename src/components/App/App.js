@@ -17,7 +17,7 @@ import Login from "../Login/Login";
 import MockPosts from "../MockPosts";
 import {compose} from "redux";
 import {connect} from "react-redux";
-import {initializeApp} from "../../redux/app-reduсer";
+import {initializeApp} from "../../redux/app-reducer";
 import Preloader from "../common/preloader";
 
 class App extends React.Component {
