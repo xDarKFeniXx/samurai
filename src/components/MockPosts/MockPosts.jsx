@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import s from './MockPosts.module.scss'
 const MockPosts = () => {
     const [posts, setPosts]=useState([])
-    useEffect(()=>{
+    useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
             .then(json => setPosts(json))
 
-    })
+    }, [])
     const mockposts=posts.map(post=>{
         return(
             <div className={s.item}>
