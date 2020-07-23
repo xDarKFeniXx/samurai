@@ -4,6 +4,8 @@ import {NavLink} from "react-router-dom";
 import userPhoto from "../../assets/images/user.png";
 
 const User = ({user, followingInProgress, unfollow, follow}) => {
+    // const status=user.status.slice(0, 15)
+    // console.log(status)
     return (
         <div className={styles.card}>
             <div>

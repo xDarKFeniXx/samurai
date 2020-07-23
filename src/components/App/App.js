@@ -4,7 +4,7 @@ import Navigation from "../Navigation";
 import {
     BrowserRouter as Router,
     Switch,
-    Route, withRouter
+    Route, withRouter, HashRouter
 } from "react-router-dom";
 import Music from "../music";
 import Settings from "../Settings";
@@ -16,9 +16,10 @@ import HeaderContainer from "../Header/HeaderContainer";
 import Login from "../Login/Login";
 import MockPosts from "../MockPosts";
 import {compose} from "redux";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {initializeApp} from "../../redux/app-reducer";
 import Preloader from "../common/preloader";
+import store from '../../redux/redux-store'
 
 class App extends React.Component {
     componentDidMount() {
@@ -27,7 +28,6 @@ class App extends React.Component {
 
 
     render() {
-        debugger
         if (!this.props.initialized) {
             return <Preloader/>
         }
@@ -81,6 +81,16 @@ const mapStateToProps = (state) => ({
     initialized: state.app.initialized
 })
 
-export default compose(
+let AppContainer = compose(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App);
+
+const SamuraiJSApp = (props) => {
+    return <HashRouter >
+        <Provider store={store}>
+            <AppContainer />
+        </Provider>
+    </HashRouter>
+}
+
+export default SamuraiJSApp;
