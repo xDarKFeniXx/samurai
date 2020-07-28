@@ -24,15 +24,7 @@
 }
 
 .wrapperPagination {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 10px auto;
+  text-align: center;
 
-  div {
-    border: 1px solid black;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }

@@ -3,6 +3,7 @@ import styles from './Navigation.module.scss'
 import {
     NavLink
 } from "react-router-dom";
+import {Menu} from "antd";
 
 const Navigation = () => {
     return (
@@ -28,6 +29,17 @@ const Navigation = () => {
             <div className={styles.item}>
                 <NavLink activeClassName={styles.active} to="/settings">Settings</NavLink>
             </div>
+            {/*<Menu>*/}
+            {/*    <Menu.Item>*/}
+            {/*        <NavLink activeClassName={styles.active} to="/profile">Profile</NavLink>*/}
+            {/*    </Menu.Item>*/}
+            {/*    <Menu.Item>*/}
+            {/*        <NavLink activeClassName={styles.active} to="/mock">JSON PH</NavLink>*/}
+            {/*    </Menu.Item>*/}
+            {/*    <Menu.Item>*/}
+            {/*        <NavLink activeClassName={styles.active} to="/users">Users</NavLink>*/}
+            {/*    </Menu.Item>*/}
+            {/*</Menu>*/}
         </nav>
     );
 };

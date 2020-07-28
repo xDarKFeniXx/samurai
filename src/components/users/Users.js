@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Users.module.scss";
-import Paginator from "../common/Paginator/Paginator";
 import User from "./User";
+import {Pagination} from "antd";
 
 let Users = (props) => {
 
@@ -15,12 +15,20 @@ let Users = (props) => {
 
     return <>
 
-        <Paginator currentPage={props.currentPage}
-                   onPageChanged={props.onPageChanged}
-                   totalItemsCount={props.totalUsersCount}
-                   pageSize={props.pageSize}
-        />
-
+        {/*<Paginator currentPage={props.currentPage}*/}
+        {/*           onPageChanged={props.onPageChanged}*/}
+        {/*           totalItemsCount={props.totalUsersCount}*/}
+        {/*           pageSize={props.pageSize}*/}
+        {/*/>*/}
+        <div className={styles.wrapperPagination}>
+            <Pagination
+                total={props.totalUsersCount}
+                onChange={props.onPageChanged}
+                defaultPageSize={props.pageSize}
+                showSizeChanger={false}
+                current={props.currentPage}
+            />
+        </div>
         <div className={styles.wrapper}>
             {userOnPage}
         </div>
