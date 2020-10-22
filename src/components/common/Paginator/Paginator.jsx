@@ -28,9 +28,9 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
         {pages
             .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
             .map((p) => {
-                return <span className={cn({
-                    [styles.selectedPage]: currentPage === p
-                }, styles.pageNumber)}
+                return <span className={
+                    cn({[styles.selectedPage]: currentPage === p}, styles.pageNumber)
+                }
                              key={p}
                              onClick={(e) => {
                                  onPageChanged(p);

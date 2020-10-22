@@ -2,19 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css'
 import './index.css';
-import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
-import store from './redux/redux-store'
-import {Provider} from "react-redux";
-import {BrowserRouter} from "react-router-dom";
-import SamuraiJSApp from "./components/App/App";
+import AppWithRouterAndStore from "./components/App/App";
 
 
-
-
-    ReactDOM.render(
-        <SamuraiJSApp />
-        , document.getElementById('root'));
+ReactDOM.render(
+    <AppWithRouterAndStore/>
+    , document.getElementById('root'));
 
 
 
